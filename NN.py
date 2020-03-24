@@ -38,5 +38,5 @@ class NN:
     def test_model(self, x, y):
         self.model.evaluate(x, y)
 
-    def run_model(self, x):
-        pass
+    def run_model(self, x):  # x => numpy.ndarrary
+        return np.argmax(self.model.predict(x))
